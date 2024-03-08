@@ -1,0 +1,62 @@
+<style>
+    td button{
+        width: 40px;
+        height: 40px;
+    }
+    td input{
+        width: 100%;
+        padding: 10px;
+    }
+</style>
+
+<center>
+    <h3>calculator</h3>
+    <form>
+        <table border="1" >
+            <tr>
+                <td>
+                    <input type="text" id="ans">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="ans.value+='1'" type="button">1</button>
+                    <button onclick="ans.value+='2'" type="button">2</button>
+                    <button onclick="ans.value+='3'" type="button">3</button>
+                    <button onclick="ans.value.endsWith('+') || ans.value.endsWith('-') || ans.value.endsWith('*') || ans.value.endsWith('/') ? '' : ans.value += '+'" type="button">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="ans.value+='4'" type="button">4</button>
+                    <button onclick="ans.value+='5'" type="button">5</button>
+                    <button onclick="ans.value+='6'" type="button">6</button>
+                    <button onclick="ans.value.endsWith('+') || ans.value.endsWith('-') || ans.value.endsWith('*') || ans.value.endsWith('/') ? '' : ans.value += '-'" type="button">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="ans.value+='7'" type="button">7</button>
+                    <button onclick="ans.value+='8'" type="button">8</button>
+                    <button onclick="ans.value+='9'" type="button">9</button>
+                    <button onclick="ans.value.endsWith('+') || ans.value.endsWith('-') || ans.value.endsWith('*') || ans.value.endsWith('/') ? '' : ans.value += '*'" type="button">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="ans.value+='0'" type="button">0</button>
+                    <button onclick="ans.value+='00'" type="button">00</button>
+                    <button onclick="ans.value+='.'" type="button">.</button>
+                    <button onclick="ans.value.endsWith('+') || ans.value.endsWith('-') || ans.value.endsWith('*') || ans.value.endsWith('/') ? '' : ans.value += '/'" type="button">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="ans.value = ''" type="button">C</button>
+                    <button onclick="ans.value = ans.value.slice(0,-1)" type="button">X</button>
+                    <button onclick="ans.value = eval(ans.value)" type="button">=</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</center>
